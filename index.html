@@ -55,7 +55,7 @@
       color: var(--white);
       letter-spacing: -0.5px;
     }
-    .nav-logo span { color: var(--accent); }
+    .nav-logo span { color: var(--accent); font-size: 1rem; font-weight: 600; }
 
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
@@ -81,7 +81,8 @@
     /* ── HERO ── */
     #home {
       min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0d2a5e 100%);
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(13,42,94,0.88) 100%),
+                  url('hero-bg.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -480,7 +481,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">JHUR<span>.</span></div>
+  <div class="nav-logo">JHUR <span>Consulting Inc.</span></div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
@@ -492,8 +493,7 @@
 
 <!-- HERO -->
 <section id="home">
-  <div class="hero-badge">Canada-Wide IT Consulting</div>
-  <h1 class="hero-title">JHUR Consulting Inc.</h1>
+  <h1 class="hero-title">JHUR <span>Consulting Inc.</span></h1>
   <p class="hero-tagline">Trusted Technology Partner for Small &amp; Mid-Sized Business.</p>
   <div class="hero-btns">
     <a href="#services" class="btn-primary">Explore Services</a>
@@ -511,10 +511,6 @@
     <div class="stat">
       <span class="stat-number">5</span>
       <span class="stat-label">Top Certifications</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">🇨🇦</span>
-      <span class="stat-label">Canada-Wide</span>
     </div>
   </div>
 </section>
@@ -730,13 +726,6 @@
           <a href="https://jhur.ca">jhur.ca</a>
         </div>
       </div>
-      <div class="contact-item">
-        <div class="contact-item-icon">🇨🇦</div>
-        <div class="contact-item-text">
-          <strong>Coverage</strong>
-          Canada-Wide
-        </div>
-      </div>
     </div>
 
     <form class="contact-form" action="https://formspree.io/f/xwvyewpo" method="POST">
@@ -803,3 +792,4 @@
 
 </body>
 </html>
+                                                                                                                                                                                                                                                                                        
