@@ -5,713 +5,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JHUR Consulting Inc. | Trusted Technology Partner</title>
-  <meta name="description" content="JHUR Consulting Inc. — Trusted Technology Partner for Small & Mid-Sized Business across Canada. Managed IT, Cybersecurity, Cloud, Microsoft 365, ERP, AI Solutions and more." />
-  <meta property="og:title" content="JHUR Consulting Inc." />
-  <meta property="og:description" content="Trusted Technology Partner for Small & Mid-Sized Business across Canada." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="JHUR Consulting Inc. — Trusted Technology Partner for Small & Mid-Sized Business across Canada." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 46'><polygon points='20,2 38,12 38,34 20,44 2,34 2,12' fill='%231a6fff' opacity='0.3'/><polygon points='20,2 38,12 38,34 20,44 2,34 2,12' fill='none' stroke='%231a6fff' stroke-width='2'/><text x='20' y='30' font-family='Arial' font-weight='800' font-size='15' fill='%2300c8ff' text-anchor='middle'>JH</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy: #0a1628;
-      --navy-mid: #132040;
-      --blue: #1a6fff;
-      --blue-light: #4d94ff;
-      --accent: #00c8ff;
-      --white: #ffffff;
-      --light: #f4f7fb;
-      --muted: #8a9ab5;
-      --text: #1e2d45;
+      --navy: #0a1628; --navy-mid: #132040; --blue: #1a6fff; --blue-light: #4d94ff;
+      --accent: #00c8ff; --white: #ffffff; --light: #f4f7fb; --muted: #8a9ab5; --text: #1e2d45;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(10, 22, 40, 0.97);
-      backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 6%;
-      height: 70px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-
-    .nav-logo-text {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-    }
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,22,40,0.97); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 6%; height: 70px; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo-text { font-size: 1.05rem; font-weight: 700; color: var(--white); letter-spacing: -0.3px; line-height: 1.2; }
     .nav-logo-text span { color: var(--accent); font-weight: 400; font-size: 0.78rem; display: block; letter-spacing: 0.5px; }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2.5rem;
-      align-items: center;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.75);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    .nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
-    .nav-links .nav-cta {
-      background: var(--blue);
-      color: var(--white);
-      padding: 0.5rem 1.3rem;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.2s;
-    }
+    .nav-links .nav-cta { background: var(--blue); color: var(--white); padding: 0.5rem 1.3rem; border-radius: 6px; font-weight: 600; transition: background 0.2s, transform 0.2s; }
     .nav-links .nav-cta:hover { background: var(--blue-light); transform: translateY(-1px); }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: all 0.3s;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      position: fixed;
-      top: 70px; left: 0; right: 0;
-      background: rgba(10,22,40,0.98);
-      padding: 1.5rem 6%;
-      z-index: 99;
-      gap: 1rem;
-    }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+    .mobile-menu { display: none; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: rgba(10,22,40,0.98); padding: 1.5rem 6%; z-index: 99; gap: 1rem; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
+    .mobile-menu a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
 
-    /* ── HERO ── */
-    #home {
-      min-height: 100vh;
-      background:
-        linear-gradient(to bottom, rgba(10,22,40,0.82) 0%, rgba(10,22,40,0.65) 60%, rgba(10,22,40,0.88) 100%),
-        url('hero-bg.jpg') center/cover no-repeat fixed;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 6% 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
+    /* HERO */
+    #home { min-height: 100vh; background: linear-gradient(to bottom, rgba(10,22,40,0.82) 0%, rgba(10,22,40,0.65) 60%, rgba(10,22,40,0.88) 100%), url('hero-bg.jpg') center/cover no-repeat fixed; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 6% 80px; position: relative; overflow: hidden; }
     #particles { position: absolute; inset: 0; pointer-events: none; }
-
-    .hero-title {
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      position: relative;
-      z-index: 1;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 0.9s ease forwards 0.3s;
-    }
+    .hero-title { font-size: clamp(2.4rem,5.5vw,4.2rem); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -1.5px; position: relative; z-index: 1; opacity: 0; transform: translateY(30px); animation: fadeUp 0.9s ease forwards 0.3s; }
     .hero-title span { color: var(--accent); }
-
-    .hero-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--blue));
-      border-radius: 3px;
-      margin: 0.6rem auto 0;
-      box-shadow: 0 0 12px rgba(0,200,255,0.6);
-      animation: glowPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes glowPulse {
-      0%, 100% { box-shadow: 0 0 12px rgba(0,200,255,0.6); width: 80px; }
-      50% { box-shadow: 0 0 24px rgba(0,200,255,0.9); width: 120px; }
-    }
-
-    .hero-tagline {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: rgba(255,255,255,0.75);
-      max-width: 580px;
-      margin: 1.2rem auto 2.5rem;
-      position: relative;
-      z-index: 1;
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards 0.6s;
-      min-height: 2em;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards 0.9s;
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: var(--white);
-      padding: 0.85rem 2rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(26,111,255,0.4);
-    }
-    .btn-primary:hover {
-      background: var(--blue-light);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(26,111,255,0.6);
-    }
-
-    .btn-outline {
-      border: 1.5px solid rgba(255,255,255,0.35);
-      color: var(--white);
-      padding: 0.85rem 2rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s, transform 0.2s;
-    }
-    .btn-outline:hover {
-      border-color: var(--accent);
-      background: rgba(0,200,255,0.08);
-      transform: translateY(-3px);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 4rem;
-      margin-top: 4.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards 1.2s;
-    }
+    .hero-title::after { content: ''; display: block; width: 80px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--blue)); border-radius: 3px; margin: 0.6rem auto 0; box-shadow: 0 0 12px rgba(0,200,255,0.6); animation: glowPulse 2s ease-in-out infinite; }
+    @keyframes glowPulse { 0%,100% { box-shadow: 0 0 12px rgba(0,200,255,0.6); width: 80px; } 50% { box-shadow: 0 0 24px rgba(0,200,255,0.9); width: 120px; } }
+    .hero-tagline { font-size: clamp(1rem,2vw,1.25rem); color: rgba(255,255,255,0.75); max-width: 580px; margin: 1.2rem auto 2.5rem; position: relative; z-index: 1; opacity: 0; animation: fadeUp 0.9s ease forwards 0.6s; min-height: 2em; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; opacity: 0; animation: fadeUp 0.9s ease forwards 0.9s; }
+    .btn-primary { background: var(--blue); color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 20px rgba(26,111,255,0.4); }
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(26,111,255,0.6); }
+    .btn-outline { border: 1.5px solid rgba(255,255,255,0.35); color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+    .btn-outline:hover { border-color: var(--accent); background: rgba(0,200,255,0.08); transform: translateY(-3px); }
+    .hero-stats { display: flex; gap: 4rem; margin-top: 4.5rem; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; opacity: 0; animation: fadeUp 0.9s ease forwards 1.2s; }
     .stat { text-align: center; }
-    .stat-number {
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: var(--accent);
-      display: block;
-      line-height: 1;
-      text-shadow: 0 0 20px rgba(0,200,255,0.4);
-    }
-    .stat-label {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 0.3rem;
-      display: block;
-    }
-    .stat-divider {
-      width: 1px;
-      height: 50px;
-      background: rgba(255,255,255,0.15);
-      align-self: center;
-    }
+    .stat-number { font-size: 2.6rem; font-weight: 800; color: var(--accent); display: block; line-height: 1; text-shadow: 0 0 20px rgba(0,200,255,0.4); }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 0.3rem; display: block; }
+    .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.15); align-self: center; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── SCROLL REVEAL ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-left {
-      opacity: 0;
-      transform: translateX(-40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal-left.visible { opacity: 1; transform: translateX(0); }
-    .reveal-right {
-      opacity: 0;
-      transform: translateX(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal-right.visible { opacity: 1; transform: translateX(0); }
 
-    /* ── SECTIONS ── */
+    /* SECTIONS */
     section { padding: 100px 6%; }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 0.75rem;
-    }
-    .section-title {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-    }
-    .section-subtitle {
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 560px;
-      margin-top: 0.75rem;
-      line-height: 1.7;
-    }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 800; color: var(--navy); line-height: 1.15; letter-spacing: -0.5px; }
+    .section-subtitle { color: var(--muted); font-size: 1rem; max-width: 560px; margin-top: 0.75rem; line-height: 1.7; }
     .section-header { margin-bottom: 3.5rem; }
 
-    /* ── SERVICES ── */
+    /* SERVICES */
     #services { background: var(--navy); }
     #services .section-title { color: var(--white); }
     #services .section-label { color: var(--accent); }
     #services .section-subtitle { color: rgba(255,255,255,0.5); }
-
-    .tab-layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .tab-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .tab-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      padding: 0.85rem 1rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 10px;
-      cursor: pointer;
-      text-align: left;
-      transition: background 0.2s, border-color 0.2s;
-      width: 100%;
-    }
+    .tab-layout { display: grid; grid-template-columns: 260px 1fr; gap: 2rem; align-items: start; }
+    .tab-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .tab-btn { display: flex; align-items: center; gap: 0.85rem; padding: 0.85rem 1rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; cursor: pointer; text-align: left; transition: background 0.2s, border-color 0.2s; width: 100%; position: relative; }
     .tab-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); }
     .tab-btn.active { background: rgba(26,111,255,0.15); border-color: rgba(26,111,255,0.4); }
-    .tab-btn.active::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 20%; bottom: 20%;
-      width: 3px;
-      background: var(--blue);
-      border-radius: 0 3px 3px 0;
-    }
-    .tab-btn { position: relative; }
-
-    .tab-icon {
-      width: 36px; height: 36px;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-    .c1 { background: rgba(26,111,255,0.2); }
-    .c2 { background: rgba(0,200,255,0.15); }
-    .c3 { background: rgba(124,58,237,0.2); }
-    .c4 { background: rgba(239,68,68,0.15); }
-    .c5 { background: rgba(16,185,129,0.15); }
-
+    .tab-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .c1 { background: rgba(26,111,255,0.2); } .c2 { background: rgba(0,200,255,0.15); } .c3 { background: rgba(124,58,237,0.2); } .c4 { background: rgba(239,68,68,0.15); } .c5 { background: rgba(16,185,129,0.15); }
     .tab-text { flex: 1; min-width: 0; }
-    .tab-name {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.3;
-    }
-    .tab-count {
-      display: block;
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.35);
-      margin-top: 0.15rem;
-    }
+    .tab-name { display: block; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.85); line-height: 1.3; }
+    .tab-count { display: block; font-size: 0.7rem; color: rgba(255,255,255,0.35); margin-top: 0.15rem; }
     .tab-arrow { color: rgba(255,255,255,0.25); font-size: 0.65rem; flex-shrink: 0; }
     .tab-btn.active .tab-arrow { color: var(--accent); }
-
     .tab-content { display: none; animation: fadeUp 0.35s ease; }
     .tab-content.active { display: block; }
-
-    .content-header {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .content-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-    .content-desc {
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.6;
-    }
-
-    .service-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-    .service-item {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 10px;
-      padding: 1.25rem;
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
-    }
-    .service-item:hover {
-      background: rgba(26,111,255,0.08);
-      border-color: rgba(26,111,255,0.25);
-      transform: translateY(-2px);
-    }
+    .content-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .content-title { font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .content-desc { font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .service-items { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 1rem; }
+    .service-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem; transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+    .service-item:hover { background: rgba(26,111,255,0.08); border-color: rgba(26,111,255,0.25); transform: translateY(-2px); }
     .item-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
-    .item-name {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 0.35rem;
-    }
+    .item-name { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.35rem; }
     .item-desc { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.5; }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     #about { background: var(--light); }
+    .mvm-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 4rem; }
+    .mvm-card { background: var(--navy); border-radius: 14px; padding: 2.2rem 2rem; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.25s, box-shadow 0.25s; }
+    .mvm-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.25); }
+    .mvm-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; }
+    .mvm-title { font-size: 1.25rem; font-weight: 700; color: var(--white); margin-bottom: 0.9rem; }
+    .mvm-body { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+    .certs-section { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .certs-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .cert-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .cert-badge { background: var(--white); border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 0.45rem 1rem; font-size: 0.78rem; font-weight: 700; color: var(--navy); letter-spacing: 0.5px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .cert-badge:hover { border-color: var(--blue); box-shadow: 0 2px 12px rgba(26,111,255,0.12); }
 
-    .mvm-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 4rem;
-    }
-    .mvm-card {
-      background: var(--navy);
-      border-radius: 14px;
-      padding: 2.2rem 2rem;
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .mvm-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
-    }
-    .mvm-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-    .mvm-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.9rem;
-    }
-    .mvm-body {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.75;
-    }
-
-    .certs-section {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .certs-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    .cert-badges {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .cert-badge {
-      background: var(--white);
-      border: 1.5px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 0.45rem 1rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: 0.5px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .cert-badge:hover {
-      border-color: var(--blue);
-      box-shadow: 0 2px 12px rgba(26,111,255,0.12);
-    }
-
-    /* ── WHY US ── */
+    /* WHY US */
     #why { background: var(--white); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 1.75rem; margin-top: 3.5rem; }
+    .why-card { padding: 2rem; border-radius: 14px; border: 1px solid #e8edf5; background: var(--white); transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,111,255,0.08); border-color: rgba(26,111,255,0.2); }
+    .why-icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg,rgba(26,111,255,0.12),rgba(0,200,255,0.08)); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
+    .why-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+    .why-body { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.75rem;
-      margin-top: 3.5rem;
-    }
-    .why-card {
-      padding: 2rem;
-      border-radius: 14px;
-      border: 1px solid #e8edf5;
-      background: var(--white);
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-    }
-    .why-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(26,111,255,0.08);
-      border-color: rgba(26,111,255,0.2);
-    }
-    .why-icon {
-      width: 48px; height: 48px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(26,111,255,0.12), rgba(0,200,255,0.08));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.25rem;
-    }
-    .why-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.6rem;
-    }
-    .why-body {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* ── CONTACT ── */
+    /* CONTACT */
     #contact { background: var(--light); }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .contact-info-title {
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+    .contact-info-title { font-size: 1.7rem; font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 1rem; }
     .contact-info-title span { color: var(--blue); }
-
-    .contact-tagline {
-      font-size: 0.92rem;
-      color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 2.5rem;
-    }
-
+    .contact-tagline { font-size: 0.92rem; color: var(--muted); line-height: 1.75; margin-bottom: 2.5rem; }
     .contact-items { display: flex; flex-direction: column; gap: 1.25rem; }
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .contact-item-icon {
-      width: 42px; height: 42px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--blue), var(--accent));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      color: white;
-    }
-    .contact-item-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
-    }
-    .contact-item-value {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-    .contact-item-value a {
-      color: var(--navy);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-item-icon { width: 42px; height: 42px; border-radius: 10px; background: linear-gradient(135deg,var(--blue),var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-item-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+    .contact-item-value { font-size: 0.92rem; font-weight: 600; color: var(--navy); }
+    .contact-item-value a { color: var(--navy); text-decoration: none; transition: color 0.2s; }
     .contact-item-value a:hover { color: var(--blue); }
-
-    /* Form */
-    .contact-form-wrap {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 32px rgba(10,22,40,0.07);
-      border: 1px solid #e8edf5;
-    }
-    .form-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 1.75rem;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
+    .contact-form-wrap { background: var(--white); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 32px rgba(10,22,40,0.07); border: 1px solid #e8edf5; }
+    .form-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 1.75rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { margin-bottom: 1.1rem; }
-    .form-group label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 0.4rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-family: inherit;
-      color: var(--text);
-      background: var(--white);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(26,111,255,0.1);
-    }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; letter-spacing: 0.5px; text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 0.9rem; font-family: inherit; color: var(--text); background: var(--white); transition: border-color 0.2s, box-shadow 0.2s; outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,111,255,0.1); }
     .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; background: linear-gradient(135deg,var(--blue),#0d5ce5); color: var(--white); border: none; padding: 0.95rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-family: inherit; }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,111,255,0.4); }
 
-    .form-submit {
-      width: 100%;
-      background: linear-gradient(135deg, var(--blue), #0d5ce5);
-      color: var(--white);
-      border: none;
-      padding: 0.95rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      font-family: inherit;
-      letter-spacing: 0.3px;
-    }
-    .form-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26,111,255,0.4);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.45);
-      text-align: center;
-      padding: 2.5rem 6%;
-      font-size: 0.82rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 2.5rem 6%; font-size: 0.82rem; border-top: 1px solid rgba(255,255,255,0.06); }
     footer strong { color: var(--white); }
-    footer a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+    footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { opacity: 0.8; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
+      .nav-links { display: none; } .hamburger { display: flex; }
       .tab-layout { grid-template-columns: 1fr; }
       .tab-list { flex-direction: row; overflow-x: auto; gap: 0.5rem; padding-bottom: 0.5rem; }
-      .tab-btn { min-width: 160px; }
-      .mvm-grid { grid-template-columns: 1fr; }
+      .tab-btn { min-width: 160px; } .mvm-grid { grid-template-columns: 1fr; }
       .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .form-row { grid-template-columns: 1fr; }
-      .hero-stats { gap: 1.5rem; }
-      .stat-divider { display: none; }
+      .hero-stats { gap: 1.5rem; } .stat-divider { display: none; }
       .certs-section { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
   </style>
@@ -759,20 +207,11 @@
     <a href="#contact" class="btn-outline">Book a Free Consultation</a>
   </div>
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-number">25+</span>
-      <span class="stat-label">Years Experience</span>
-    </div>
+    <div class="stat"><span class="stat-number">25+</span><span class="stat-label">Years Experience</span></div>
     <div class="stat-divider"></div>
-    <div class="stat">
-      <span class="stat-number">17+</span>
-      <span class="stat-label">Service Areas</span>
-    </div>
+    <div class="stat"><span class="stat-number">17+</span><span class="stat-label">Service Areas</span></div>
     <div class="stat-divider"></div>
-    <div class="stat">
-      <span class="stat-number">100%</span>
-      <span class="stat-label">Client Focused</span>
-    </div>
+    <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Client Focused</span></div>
   </div>
 </section>
 
@@ -783,7 +222,6 @@
     <h2 class="section-title">End-to-End Technology Services</h2>
     <p class="section-subtitle">One trusted partner for everything — from day-to-day IT support to full-scale ERP and AI transformation.</p>
   </div>
-
   <div class="tab-layout reveal">
     <div class="tab-list">
       <button class="tab-btn active" onclick="switchTab(0)">
@@ -812,150 +250,64 @@
         <span class="tab-arrow">▶</span>
       </button>
     </div>
-
     <div>
-      <!-- Tab 0: Managed IT -->
       <div class="tab-content active">
         <div class="content-header">
           <div class="content-title">🖥️ Managed IT &amp; Infrastructure</div>
           <div class="content-desc">Day-to-day operations, support, and reliability for your entire IT environment.</div>
         </div>
         <div class="service-items">
-          <div class="service-item">
-            <div class="item-icon">🛠️</div>
-            <div class="item-name">Managed IT Services</div>
-            <div class="item-desc">Proactive monitoring, helpdesk support, and full IT management so your team can focus on business.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🖨️</div>
-            <div class="item-name">Managed Print Service</div>
-            <div class="item-desc">Optimize your print environment, reduce costs, and ensure reliable printing across your organization.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🌐</div>
-            <div class="item-name">Network Infrastructure</div>
-            <div class="item-desc">Design, deployment, and management of secure, high-performance networks for your business.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">💾</div>
-            <div class="item-name">Backup &amp; Disaster Recovery</div>
-            <div class="item-desc">Enterprise-grade backup solutions ensuring business continuity when the unexpected happens.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">📞</div>
-            <div class="item-name">VoIP &amp; Unified Communications</div>
-            <div class="item-desc">Modern phone systems and collaboration tools that keep your team connected anywhere.</div>
-          </div>
+          <div class="service-item"><div class="item-icon">🛠️</div><div class="item-name">Managed IT Services</div><div class="item-desc">Proactive monitoring, helpdesk support, and full IT management so your team can focus on business.</div></div>
+          <div class="service-item"><div class="item-icon">🖨️</div><div class="item-name">Managed Print Service</div><div class="item-desc">Optimize your print environment, reduce costs, and ensure reliable printing across your organization.</div></div>
+          <div class="service-item"><div class="item-icon">🌐</div><div class="item-name">Network Infrastructure</div><div class="item-desc">Design, deployment, and management of secure, high-performance networks for your business.</div></div>
+          <div class="service-item"><div class="item-icon">💾</div><div class="item-name">Backup &amp; Disaster Recovery</div><div class="item-desc">Enterprise-grade backup solutions ensuring business continuity when the unexpected happens.</div></div>
+          <div class="service-item"><div class="item-icon">📞</div><div class="item-name">VoIP &amp; Unified Communications</div><div class="item-desc">Modern phone systems and collaboration tools that keep your team connected anywhere.</div></div>
         </div>
       </div>
-
-      <!-- Tab 1: Cloud -->
       <div class="tab-content">
         <div class="content-header">
           <div class="content-title">☁️ Cloud &amp; Productivity</div>
           <div class="content-desc">Modern cloud solutions and productivity platforms that help your team work smarter, from anywhere.</div>
         </div>
         <div class="service-items">
-          <div class="service-item">
-            <div class="item-icon">🔷</div>
-            <div class="item-name">Microsoft 365</div>
-            <div class="item-desc">Full Microsoft 365 deployment, migration, licensing, and ongoing management for your organization.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🌩️</div>
-            <div class="item-name">Azure Cloud Services</div>
-            <div class="item-desc">Cloud infrastructure, virtual machines, and enterprise Azure solutions tailored to your needs.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🟢</div>
-            <div class="item-name">Google Workspace</div>
-            <div class="item-desc">Deployment and management of Google Workspace for seamless collaboration and productivity.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🔄</div>
-            <div class="item-name">Cloud Migration</div>
-            <div class="item-desc">Seamless migration of your on-premises infrastructure to the cloud with minimal disruption.</div>
-          </div>
+          <div class="service-item"><div class="item-icon">🔷</div><div class="item-name">Microsoft 365</div><div class="item-desc">Full Microsoft 365 deployment, migration, licensing, and ongoing management for your organization.</div></div>
+          <div class="service-item"><div class="item-icon">🌩️</div><div class="item-name">Azure Cloud Services</div><div class="item-desc">Cloud infrastructure, virtual machines, and enterprise Azure solutions tailored to your needs.</div></div>
+          <div class="service-item"><div class="item-icon">🟢</div><div class="item-name">Google Workspace</div><div class="item-desc">Deployment and management of Google Workspace for seamless collaboration and productivity.</div></div>
+          <div class="service-item"><div class="item-icon">🔄</div><div class="item-name">Cloud Migration</div><div class="item-desc">Seamless migration of your on-premises infrastructure to the cloud with minimal disruption.</div></div>
         </div>
       </div>
-
-      <!-- Tab 2: ERP -->
       <div class="tab-content">
         <div class="content-header">
           <div class="content-title">📊 ERP &amp; Business Applications</div>
           <div class="content-desc">Streamline your operations with powerful business applications and enterprise resource planning solutions.</div>
         </div>
         <div class="service-items">
-          <div class="service-item">
-            <div class="item-icon">⚙️</div>
-            <div class="item-name">ERP Implementation</div>
-            <div class="item-desc">End-to-end ERP deployment including requirements analysis, configuration, training, and support.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">☁️</div>
-            <div class="item-name">Salesforce CRM</div>
-            <div class="item-desc">Salesforce implementation and customization to manage your customer relationships and sales pipeline.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🤖</div>
-            <div class="item-name">Business Process Automation</div>
-            <div class="item-desc">Automate repetitive workflows and integrate your business systems for maximum efficiency.</div>
-          </div>
+          <div class="service-item"><div class="item-icon">⚙️</div><div class="item-name">ERP Implementation</div><div class="item-desc">End-to-end ERP deployment including requirements analysis, configuration, training, and support.</div></div>
+          <div class="service-item"><div class="item-icon">☁️</div><div class="item-name">Salesforce CRM</div><div class="item-desc">Salesforce implementation and customization to manage your customer relationships and sales pipeline.</div></div>
+          <div class="service-item"><div class="item-icon">🤖</div><div class="item-name">Business Process Automation</div><div class="item-desc">Automate repetitive workflows and integrate your business systems for maximum efficiency.</div></div>
         </div>
       </div>
-
-      <!-- Tab 3: Security & AI -->
       <div class="tab-content">
         <div class="content-header">
           <div class="content-title">🛡️ Security, AI &amp; Innovation</div>
           <div class="content-desc">Protect your business and unlock new possibilities with cutting-edge security and AI solutions.</div>
         </div>
         <div class="service-items">
-          <div class="service-item">
-            <div class="item-icon">🔒</div>
-            <div class="item-name">Cybersecurity Services</div>
-            <div class="item-desc">Comprehensive security strategy including endpoint protection, threat monitoring, and incident response.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🔍</div>
-            <div class="item-name">Cybersecurity Assessment</div>
-            <div class="item-desc">In-depth assessment of your security posture with actionable remediation recommendations.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🧠</div>
-            <div class="item-name">AI Solutions &amp; Integration</div>
-            <div class="item-desc">Practical AI implementation — from Microsoft Copilot to custom AI workflows that drive real results.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🌐</div>
-            <div class="item-name">Offshore Development Services</div>
-            <div class="item-desc">Cost-effective software development with quality assurance, project management, and transparent delivery.</div>
-          </div>
+          <div class="service-item"><div class="item-icon">🔒</div><div class="item-name">Cybersecurity Services</div><div class="item-desc">Comprehensive security strategy including endpoint protection, threat monitoring, and incident response.</div></div>
+          <div class="service-item"><div class="item-icon">🔍</div><div class="item-name">Cybersecurity Assessment</div><div class="item-desc">In-depth assessment of your security posture with actionable remediation recommendations.</div></div>
+          <div class="service-item"><div class="item-icon">🧠</div><div class="item-name">AI Solutions &amp; Integration</div><div class="item-desc">Practical AI implementation — from Microsoft Copilot to custom AI workflows that drive real results.</div></div>
+          <div class="service-item"><div class="item-icon">🌐</div><div class="item-name">Offshore Development</div><div class="item-desc">Cost-effective software development with quality assurance, project management, and transparent delivery.</div></div>
         </div>
       </div>
-
-      <!-- Tab 4: Procurement -->
       <div class="tab-content">
         <div class="content-header">
           <div class="content-title">📋 Procurement &amp; Delivery</div>
           <div class="content-desc">End-to-end technology procurement and project management that keeps initiatives on time and on budget.</div>
         </div>
         <div class="service-items">
-          <div class="service-item">
-            <div class="item-icon">🛒</div>
-            <div class="item-name">IT Procurement</div>
-            <div class="item-desc">Hardware, software, and licensing procurement with competitive pricing and vendor management.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">📁</div>
-            <div class="item-name">Project Management</div>
-            <div class="item-desc">PMP-certified project management ensuring your technology initiatives are delivered on time and budget.</div>
-          </div>
-          <div class="service-item">
-            <div class="item-icon">🤝</div>
-            <div class="item-name">Vendor Management</div>
-            <div class="item-desc">Single point of contact for all your technology vendors — we handle the relationships so you don't have to.</div>
-          </div>
+          <div class="service-item"><div class="item-icon">🛒</div><div class="item-name">IT Procurement</div><div class="item-desc">Hardware, software, and licensing procurement with competitive pricing and vendor management.</div></div>
+          <div class="service-item"><div class="item-icon">📁</div><div class="item-name">Project Management</div><div class="item-desc">PMP-certified project management ensuring your technology initiatives are delivered on time and budget.</div></div>
+          <div class="service-item"><div class="item-icon">🤝</div><div class="item-name">Vendor Management</div><div class="item-desc">Single point of contact for all your technology vendors — we handle the relationships so you don't have to.</div></div>
         </div>
       </div>
     </div>
@@ -969,7 +321,6 @@
     <h2 class="section-title">Built on Expertise. Driven by Results.</h2>
     <p class="section-subtitle">JHUR Consulting brings enterprise-grade technology leadership to small and mid-sized businesses — without the enterprise overhead.</p>
   </div>
-
   <div class="mvm-grid">
     <div class="mvm-card reveal">
       <div class="mvm-label">Mission</div>
@@ -987,7 +338,6 @@
       <div class="mvm-body">We do what we say. We bring deep expertise across infrastructure, cloud, security, and enterprise applications. We hold ourselves accountable to outcomes — not just deliverables — and we're always straight with our clients about what's working and what isn't.</div>
     </div>
   </div>
-
   <div class="certs-section reveal">
     <span class="certs-label">Team Certifications</span>
     <div class="cert-badges">
@@ -1008,38 +358,13 @@
     <h2 class="section-title">The JHUR Consulting Difference</h2>
     <p class="section-subtitle">We combine deep technical expertise with business acumen to deliver technology that actually moves the needle.</p>
   </div>
-
   <div class="why-grid">
-    <div class="why-card reveal">
-      <div class="why-icon">🎯</div>
-      <div class="why-title">Business-First Thinking</div>
-      <div class="why-body">We don't recommend technology for technology's sake. Every solution we propose is tied to a clear business outcome — efficiency, growth, security, or cost reduction.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon">🏆</div>
-      <div class="why-title">Enterprise Depth, SMB Focus</div>
-      <div class="why-body">With 25+ years of experience delivering complex IT projects for large organizations, we bring that same rigour and expertise to growing businesses that need it most.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon">🔗</div>
-      <div class="why-title">Single Trusted Partner</div>
-      <div class="why-body">From infrastructure to cloud to ERP to AI — we cover it all. No juggling multiple vendors or finger-pointing when things go wrong. One partner, full accountability.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon">⚡</div>
-      <div class="why-title">Agile &amp; Responsive</div>
-      <div class="why-body">We move at the speed of your business. Our lean team structure means direct access to senior expertise without the bureaucracy of a large consulting firm.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon">🛡️</div>
-      <div class="why-title">Security-First Approach</div>
-      <div class="why-body">Cybersecurity isn't an add-on — it's built into every solution we design. We protect your business proactively, not reactively.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-icon">📈</div>
-      <div class="why-title">Scalable Solutions</div>
-      <div class="why-body">We design for where you're going, not just where you are. Our solutions scale with your business so you're never paying to rip and replace infrastructure you just put in.</div>
-    </div>
+    <div class="why-card reveal"><div class="why-icon">🎯</div><div class="why-title">Business-First Thinking</div><div class="why-body">We don't recommend technology for technology's sake. Every solution we propose is tied to a clear business outcome — efficiency, growth, security, or cost reduction.</div></div>
+    <div class="why-card reveal"><div class="why-icon">🏆</div><div class="why-title">Enterprise Depth, SMB Focus</div><div class="why-body">With 25+ years of experience delivering complex IT projects for large organizations, we bring that same rigour and expertise to growing businesses that need it most.</div></div>
+    <div class="why-card reveal"><div class="why-icon">🔗</div><div class="why-title">Single Trusted Partner</div><div class="why-body">From infrastructure to cloud to ERP to AI — we cover it all. No juggling multiple vendors or finger-pointing when things go wrong. One partner, full accountability.</div></div>
+    <div class="why-card reveal"><div class="why-icon">⚡</div><div class="why-title">Agile &amp; Responsive</div><div class="why-body">We move at the speed of your business. Our lean team structure means direct access to senior expertise without the bureaucracy of a large consulting firm.</div></div>
+    <div class="why-card reveal"><div class="why-icon">🛡️</div><div class="why-title">Security-First Approach</div><div class="why-body">Cybersecurity isn't an add-on — it's built into every solution we design. We protect your business proactively, not reactively.</div></div>
+    <div class="why-card reveal"><div class="why-icon">📈</div><div class="why-title">Scalable Solutions</div><div class="why-body">We design for where you're going, not just where you are. Our solutions scale with your business so you're never paying to rip and replace infrastructure you just put in.</div></div>
   </div>
 </section>
 
@@ -1050,7 +375,6 @@
     <h2 class="section-title">Let's Talk About Your Technology</h2>
     <p class="section-subtitle">Ready to transform your IT? We'd love to learn about your business and show you what's possible.</p>
   </div>
-
   <div class="contact-layout">
     <div class="reveal-left">
       <div class="contact-info-title">JHUR <span>Consulting Inc.</span></div>
@@ -1058,49 +382,27 @@
       <div class="contact-items">
         <div class="contact-item">
           <div class="contact-item-icon">📧</div>
-          <div>
-            <div class="contact-item-label">Email</div>
-            <div class="contact-item-value"><a href="mailto:info@jhur.ca">info@jhur.ca</a></div>
-          </div>
+          <div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:info@jhur.ca">info@jhur.ca</a></div></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🌐</div>
-          <div>
-            <div class="contact-item-label">Website</div>
-            <div class="contact-item-value"><a href="https://jhur.ca" target="_blank">jhur.ca</a></div>
-          </div>
+          <div><div class="contact-item-label">Website</div><div class="contact-item-value"><a href="https://jhur.ca" target="_blank">jhur.ca</a></div></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">🇨🇦</div>
-          <div>
-            <div class="contact-item-label">Location</div>
-            <div class="contact-item-value">Ontario, Canada</div>
-          </div>
+          <div><div class="contact-item-label">Location</div><div class="contact-item-value">Ontario, Canada</div></div>
         </div>
       </div>
     </div>
-
     <div class="contact-form-wrap reveal-right">
       <div class="form-title">Send Us a Message</div>
       <form action="https://formspree.io/f/xwvyewpo" method="POST">
         <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="first_name" placeholder="John" required />
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="last_name" placeholder="Smith" required />
-          </div>
+          <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="first_name" placeholder="John" required /></div>
+          <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="last_name" placeholder="Smith" required /></div>
         </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="john@yourcompany.com" required />
-        </div>
-        <div class="form-group">
-          <label for="company">Company Name</label>
-          <input type="text" id="company" name="company" placeholder="Your Company Inc." />
-        </div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="john@yourcompany.com" required /></div>
+        <div class="form-group"><label for="company">Company Name</label><input type="text" id="company" name="company" placeholder="Your Company Inc." /></div>
         <div class="form-group">
           <label for="service">Service Interest</label>
           <select id="service" name="service">
@@ -1114,10 +416,7 @@
             <option>General Inquiry</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your technology challenges or goals..."></textarea>
-        </div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us about your technology challenges or goals..."></textarea></div>
         <button type="submit" class="form-submit">Send Message →</button>
       </form>
     </div>
@@ -1130,108 +429,76 @@
 </footer>
 
 <script>
-  /* ── HAMBURGER ── */
+  /* HAMBURGER */
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-  });
-  function closeMenu() {
-    mobileMenu.classList.remove('open');
-  }
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  function closeMenu() { mobileMenu.classList.remove('open'); }
 
-  /* ── TAB SWITCHER ── */
+  /* TAB SWITCHER */
   function switchTab(i) {
-    document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
-    document.querySelectorAll('.tab-content').forEach((c, j) => c.classList.toggle('active', i === j));
+    document.querySelectorAll('.tab-btn').forEach((b,j) => b.classList.toggle('active', i===j));
+    document.querySelectorAll('.tab-content').forEach((c,j) => c.classList.toggle('active', i===j));
   }
 
-  /* ── TYPED TAGLINE ── */
+  /* TYPED TAGLINE */
   const taglines = [
     'Enterprise IT. SMB Price Point.',
     'Your Dedicated Technology Partner.',
     'Cloud. Security. ERP. AI. All Under One Roof.',
     'Trusted Technology Partner for Small & Mid-Sized Business.'
   ];
-  let tIdx = 0, cIdx = 0, deleting = false;
-  const el = document.getElementById('typed-tagline');
+  let tIdx=0, cIdx=0, deleting=false;
+  const typedEl = document.getElementById('typed-tagline');
   function typeLoop() {
     const current = taglines[tIdx];
     if (!deleting) {
-      el.textContent = current.slice(0, ++cIdx);
-      if (cIdx === current.length) { deleting = true; setTimeout(typeLoop, 2000); return; }
+      typedEl.textContent = current.slice(0, ++cIdx);
+      if (cIdx === current.length) { deleting=true; setTimeout(typeLoop,2000); return; }
     } else {
-      el.textContent = current.slice(0, --cIdx);
-      if (cIdx === 0) { deleting = false; tIdx = (tIdx + 1) % taglines.length; }
+      typedEl.textContent = current.slice(0, --cIdx);
+      if (cIdx === 0) { deleting=false; tIdx=(tIdx+1)%taglines.length; }
     }
     setTimeout(typeLoop, deleting ? 40 : 65);
   }
   typeLoop();
 
-  /* ── PARTICLE CANVAS ── */
+  /* PARTICLE CANVAS */
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
-  let particles = [];
-  function resize() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-  window.addEventListener('resize', resize);
-  resize();
-
-  function Particle() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.vx = (Math.random() - 0.5) * 0.4;
-    this.vy = (Math.random() - 0.5) * 0.4;
-    this.r = Math.random() * 1.5 + 0.5;
-    this.alpha = Math.random() * 0.5 + 0.2;
-  }
-
-  for (let i = 0; i < 80; i++) particles.push(new Particle());
-
-  function drawParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0,200,255,${p.alpha})`;
-      ctx.fill();
+  let pts = [];
+  function resizeCanvas() { canvas.width=canvas.offsetWidth; canvas.height=canvas.offsetHeight; }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  function Pt() { this.x=Math.random()*canvas.width; this.y=Math.random()*canvas.height; this.vx=(Math.random()-0.5)*0.4; this.vy=(Math.random()-0.5)*0.4; this.r=Math.random()*1.5+0.5; this.a=Math.random()*0.5+0.2; }
+  for(let i=0;i<80;i++) pts.push(new Pt());
+  function draw() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pts.forEach(p => {
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
+      if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(0,200,255,${p.a})`; ctx.fill();
     });
-    particles.forEach((a, i) => {
-      particles.slice(i + 1).forEach(b => {
-        const dx = a.x - b.x, dy = a.y - b.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(0,200,255,${0.12 * (1 - dist / 120)})`;
-          ctx.lineWidth = 0.6;
-          ctx.stroke();
-        }
-      });
-    });
-    requestAnimationFrame(drawParticles);
+    pts.forEach((a,i) => pts.slice(i+1).forEach(b => {
+      const dx=a.x-b.x, dy=a.y-b.y, dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<120) { ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.strokeStyle=`rgba(0,200,255,${0.12*(1-dist/120)})`; ctx.lineWidth=0.6; ctx.stroke(); }
+    }));
+    requestAnimationFrame(draw);
   }
-  drawParticles();
+  draw();
 
-  /* ── SCROLL REVEAL ── */
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  /* SCROLL REVEAL */
+  const revEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
-  revealEls.forEach(el => observer.observe(el));
+  revEls.forEach(el => obs.observe(el));
 
-  /* ── NAV SCROLL STYLE ── */
+  /* NAV SCROLL */
   window.addEventListener('scroll', () => {
-    document.querySelector('nav').style.background =
-      window.scrollY > 50 ? 'rgba(10,22,40,0.99)' : 'rgba(10,22,40,0.97)';
+    document.querySelector('nav').style.background = window.scrollY>50 ? 'rgba(10,22,40,0.99)' : 'rgba(10,22,40,0.97)';
   });
 </script>
 </body>
