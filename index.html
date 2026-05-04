@@ -47,11 +47,6 @@
     .btn-primary:hover { background: var(--blue-light); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(26,111,255,0.6); }
     .btn-outline { border: 1.5px solid rgba(255,255,255,0.35); color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
     .btn-outline:hover { border-color: var(--accent); background: rgba(0,200,255,0.08); transform: translateY(-3px); }
-    .hero-stats { display: flex; gap: 4rem; margin-top: 4.5rem; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; opacity: 0; animation: fadeUp 0.9s ease forwards 1.2s; }
-    .stat { text-align: center; }
-    .stat-number { font-size: 2.6rem; font-weight: 800; color: var(--accent); display: block; line-height: 1; text-shadow: 0 0 20px rgba(0,200,255,0.4); }
-    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 0.3rem; display: block; }
-    .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.15); align-self: center; }
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
     /* SCROLL REVEAL */
@@ -159,7 +154,6 @@
       .tab-btn { min-width: 160px; } .mvm-grid { grid-template-columns: 1fr; }
       .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .form-row { grid-template-columns: 1fr; }
-      .hero-stats { gap: 1.5rem; } .stat-divider { display: none; }
       .certs-section { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
   </style>
@@ -205,13 +199,6 @@
   <div class="hero-btns">
     <a href="#services" class="btn-primary">Explore Services</a>
     <a href="#contact" class="btn-outline">Book a Free Consultation</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat"><span class="stat-number">25+</span><span class="stat-label">Years Experience</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-number">17+</span><span class="stat-label">Service Areas</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Client Focused</span></div>
   </div>
 </section>
 
